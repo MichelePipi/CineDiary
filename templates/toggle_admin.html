@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Toggle{% endblock %}
+
+{% block content %}
+<div class="container pt-5">
+    <p class="display-6 fw-bold text-center">
+        {% if admin %}
+            Administration mode has been enabled.
+        {% else %}
+            Administration mode has been disabled.
+        {% endif %}
+    </p>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block on_stats_page %} active{% endblock %}
+{% block title %}Statistics{% endblock %}
+
+{% block content %}
+    <div class="container py-5 mx-5">
+        <p class="fw-bold display-6">
+            You have logged {{total_logged}} movie(s).
+        </p>
+        <p class="fw-bold display-6">
+            You gave an average rating of {{average_rating}}/10.
+        </p>
+    </div>
+{% endblock %}

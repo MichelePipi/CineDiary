@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}View Log{% endblock %}
+
+{% block content %}
+<div class="container py-5 mx-5">
+    <h1 class="bd-title">
+        {{title}}
+        {% if release_year %}
+        ({{release_year}})
+        {% endif %}
+    </h1>
+    <p>
+        {% if log_details %}
+        {{log_details}}
+        {% else %}
+        Looks like you didn't say anything about this movie.
+        {% endif %}
+    </p>
+    {% if rating %}
+        <h2>You rated this {{rating}}/10</h2>
+    {% endif %}
+        <h2>Watched on {{watch_date}}</h2>
+</div>
+{% endblock %}

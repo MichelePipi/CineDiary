@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Movies Logged{% endblock %}
+{% block on_logged_page %}active{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    {% if movies %}
+    <div class="table-responsive-xs roboto" style="width:auto; height:500px; overflow: auto;">
+        <table class="table table-secondary table-sm table-hover table-striped table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col" id="test">id</th>
+                    <th scope="col">Movie Title</th>
+                    <th scope="col">Date Watched</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Release Year</th>
+                    <th scope="col"></th>
+                    {% if admin %}
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                <tr>
+                    <th scope="row">{{movie[0]}}</th>
+                    <td>{{movie[1]}}</td>
+                    <td>{{movie[3]}}</td>
+                    <td>{% if movie[4] %}{{movie[4]}}/10{% else %}N/A{% endif %}</td>
+                    <td>{% if movie[5] %}{{movie[5]}}{% else %}N/A{% endif %}</td>
+                    <td><a href="/view/{{movie[0]}}"><i class="fa fa-search"></i></a></td>
+                    {% if admin %}
+                    <td><a href="/edit/{{movie[0]}}"><i class="fa fa-user-edit"></i></a></td>
+                    <td><a href="/delete/{{movie[0]}}"><i class="fa fa-trash-alt"></i></a></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <h1 class="mx-5 py-5">Hm... such empty. <a href="/create">Why don't you log a movie?</a></h1>
+</div>
+{% endif %} {% endblock %}

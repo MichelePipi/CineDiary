@@ -1,0 +1,49 @@
+.black {
+    color:black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center; */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-emerald-green {
+    background-color: #5CDB95;
+}
+
+.navbar-gradient {
+    background: #3aabb5; /*Old Browsers*/
+    background: linear-gradient(to right top, #3aabb5, #12bdcd) !important;
+}
+
+.bg-powder-blue {
+    background-color: #BADFE7;
+}
+
+.text-blue {
+    color: #E63946
+}
+
+.active-page {
+    background-color: black;
+    color: white;
+}
