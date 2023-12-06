@@ -1,4 +1,5 @@
-
+.vscode/
+.DS_STORE
 *.zip
 *.docx
 # Byte-compiled / optimized / DLL files
